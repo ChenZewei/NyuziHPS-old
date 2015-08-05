@@ -1,0 +1,96 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+# Date created = 10:13:01  July 29, 2015
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Nyuzi_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSXFC6D6F31C8ES
+set_global_assignment -name TOP_LEVEL_ENTITY nyuzi
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:13:01  JULY 29, 2015"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/writeback_stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/thread_select_stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/sync_fifo.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/sram_2r1w.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/sram_1r1w.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/reciprocal_rom.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/performance_counters.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/operand_fetch_stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/oh_to_idx.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/nyuzi.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/l2_cache_update.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/l2_cache_tag.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/l2_cache_read.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/l2_cache_pending_miss_cam.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/l2_cache_interface.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/l2_cache_arb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/l2_cache.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/l2_axi_bus_interface.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/l1_store_queue.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/l1_load_miss_queue.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/io_request_queue.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/io_arbiter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/int_execute_stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/instruction_decode_stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/ifetch_tag_stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/ifetch_data_stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/idx_to_oh.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/fp_execute_stage5.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/fp_execute_stage4.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/fp_execute_stage3.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/fp_execute_stage2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/fp_execute_stage1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/defines.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/dcache_tag_stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/dcache_data_stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/core.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/control_registers.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/config.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/cam.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/cache_lru.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/arbiter.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

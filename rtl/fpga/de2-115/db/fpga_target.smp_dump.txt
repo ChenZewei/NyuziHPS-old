@@ -1,0 +1,13 @@
+
+State Machine - |fpga_top|ps2_controller:ps2_controller|state_ff
+Name state_ff.STATE_READ_STOP_BIT state_ff.STATE_READ_PARITY state_ff.STATE_READ_CHARACTER state_ff.STATE_WAIT_START 
+state_ff.STATE_WAIT_START 0 0 0 0 
+state_ff.STATE_READ_CHARACTER 0 0 1 1 
+state_ff.STATE_READ_PARITY 0 1 0 1 
+state_ff.STATE_READ_STOP_BIT 1 0 0 1 
+
+State Machine - |fpga_top|axi_interconnect:axi_interconnect|read_state
+Name read_state.STATE_ARBITRATE read_state.STATE_ACTIVE_BURST read_state.STATE_ISSUE_ADDRESS 
+read_state.STATE_ARBITRATE 0 0 0 
+read_state.STATE_ISSUE_ADDRESS 1 0 1 
+read_state.STATE_ACTIVE_BURST 1 1 0 

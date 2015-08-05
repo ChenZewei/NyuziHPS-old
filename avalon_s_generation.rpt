@@ -1,0 +1,45 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=C:/Users/Administrator/Documents/Quatus/NyuziHPS/ --output-directory=C:/Users/Administrator/Documents/Quatus/NyuziHPS/avalon_s/ --report-file=bsf:C:/Users/Administrator/Documents/Quatus/NyuziHPS/avalon_s.bsf --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file=C:/Users/Administrator/Documents/Quatus/NyuziHPS/avalon_s.qsys
+Progress: Loading NyuziHPS/avalon_s.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding merlin_master_agent_0 [altera_merlin_master_agent 13.0]
+Progress: Parameterizing module merlin_master_agent_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: avalon_s.merlin_master_agent_0: merlin_master_agent_0.av must be connected to an Avalon-MM master
+Warning: avalon_s.merlin_master_agent_0.cp: merlin_master_agent_0.cp must be connected to an Avalon-ST sink
+Warning: avalon_s.merlin_master_agent_0.rp: merlin_master_agent_0.rp must be connected to an Avalon-ST source
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=C:/Users/Administrator/Documents/Quatus/NyuziHPS/ --output-directory=C:/Users/Administrator/Documents/Quatus/NyuziHPS/avalon_s/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:C:/Users/Administrator/Documents/Quatus/NyuziHPS/avalon_s.sopcinfo --report-file=html:C:/Users/Administrator/Documents/Quatus/NyuziHPS/avalon_s.html --report-file=qip:C:/Users/Administrator/Documents/Quatus/NyuziHPS/avalon_s/synthesis/avalon_s.qip --report-file=cmp:C:/Users/Administrator/Documents/Quatus/NyuziHPS/avalon_s.cmp --report-file=svd --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file=C:/Users/Administrator/Documents/Quatus/NyuziHPS/avalon_s.qsys --language=VERILOG
+Progress: Loading NyuziHPS/avalon_s.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding merlin_master_agent_0 [altera_merlin_master_agent 13.0]
+Progress: Parameterizing module merlin_master_agent_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: avalon_s.merlin_master_agent_0: merlin_master_agent_0.av must be connected to an Avalon-MM master
+Warning: avalon_s.merlin_master_agent_0.cp: merlin_master_agent_0.cp must be connected to an Avalon-ST sink
+Warning: avalon_s.merlin_master_agent_0.rp: merlin_master_agent_0.rp must be connected to an Avalon-ST source
+Info: avalon_s: Generating avalon_s "avalon_s" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 2 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 2 modules, 2 connections
+Info: reset_adaptation_transform: After transform: 3 modules, 4 connections
+Info: merlin_mm_transform: After transform: 3 modules, 4 connections
+Info: merlin_master_agent_0: "avalon_s" instantiated altera_merlin_master_agent "merlin_master_agent_0"
+Info: rst_controller: "avalon_s" instantiated altera_reset_controller "rst_controller"
+Info: avalon_s: Done avalon_s" with 3 modules, 5 files, 29941 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

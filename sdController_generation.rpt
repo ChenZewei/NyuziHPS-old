@@ -1,0 +1,146 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=C:/Users/Administrator/Documents/Quatus/NyuziHPS/ --output-directory=C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController/ --report-file=bsf:C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController.bsf --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file=C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController.qsys
+Progress: Loading NyuziHPS/sdController.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 13.0.1]
+Progress: Parameterizing module hps_0
+Progress: Adding mem_if_ddr3_emif_0 [altera_mem_if_ddr3_emif 13.0]
+Progress: Parameterizing module mem_if_ddr3_emif_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: sdController.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Warning: sdController.mem_if_ddr3_emif_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Warning: sdController.mem_if_ddr3_emif_0: 'Quick' simulation modes are NOT timing accurate. Some simulation memory models may issue warnings or errors
+Warning: sdController.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.status must be exported, or connected to a matching conduit.
+Warning: sdController.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.pll_sharing must be exported, or connected to a matching conduit.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=C:/Users/Administrator/Documents/Quatus/NyuziHPS/ --output-directory=C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController.sopcinfo --report-file=html:C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController.html --report-file=qip:C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController/synthesis/sdController.qip --report-file=cmp:C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController.cmp --report-file=svd --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file=C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController.qsys --language=VERILOG
+Progress: Loading NyuziHPS/sdController.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 13.0.1]
+Progress: Parameterizing module hps_0
+Progress: Adding mem_if_ddr3_emif_0 [altera_mem_if_ddr3_emif 13.0]
+Progress: Parameterizing module mem_if_ddr3_emif_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: sdController.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Warning: sdController.mem_if_ddr3_emif_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Warning: sdController.mem_if_ddr3_emif_0: 'Quick' simulation modes are NOT timing accurate. Some simulation memory models may issue warnings or errors
+Warning: sdController.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.status must be exported, or connected to a matching conduit.
+Warning: sdController.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.pll_sharing must be exported, or connected to a matching conduit.
+Info: sdController: Generating sdController "sdController" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 3 modules, 7 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 4 modules, 10 connections
+Info: merlin_domain_transform: After transform: 9 modules, 35 connections
+Info: merlin_router_transform: After transform: 12 modules, 44 connections
+Info: merlin_burst_transform: After transform: 13 modules, 47 connections
+Info: com_altera_sopcmodel_transforms_avalon_CombinedWidthTransform: After transform: 14 modules, 51 connections
+Info: reset_adaptation_transform: After transform: 16 modules, 55 connections
+Info: merlin_network_to_switch_transform: After transform: 21 modules, 65 connections
+Info: Inserting clock-crossing logic between cmd_xbar_demux.src0 and cmd_xbar_mux.sink0
+Info: Inserting clock-crossing logic between cmd_xbar_demux_001.src0 and cmd_xbar_mux.sink1
+Info: Inserting clock-crossing logic between rsp_xbar_demux.src0 and rsp_xbar_mux.sink0
+Info: Inserting clock-crossing logic between rsp_xbar_demux.src1 and rsp_xbar_mux_001.sink0
+Info: com_altera_sopcmodel_transforms_avalon_ClockCrossingTransform: After transform: 25 modules, 85 connections
+Info: merlin_mm_transform: After transform: 25 modules, 85 connections
+Info: hps_0: "Doing Pretransform for module: hps_0"
+Warning: hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 2 modules, 0 connections
+Info: hps_0: "sdController" instantiated altera_hps "hps_0"
+Info: pipeline_bridge_swap_transform: After transform: 17 modules, 39 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 19 modules, 45 connections
+Info: merlin_mm_transform: After transform: 19 modules, 45 connections
+Info: mem_if_ddr3_emif_0: "sdController" instantiated altera_mem_if_ddr3_emif "mem_if_ddr3_emif_0"
+Info: mem_if_ddr3_emif_0_avl_translator: "sdController" instantiated altera_merlin_slave_translator "mem_if_ddr3_emif_0_avl_translator"
+Info: hps_0_h2f_axi_master_agent: "sdController" instantiated altera_merlin_axi_master_ni "hps_0_h2f_axi_master_agent"
+Info: mem_if_ddr3_emif_0_avl_translator_avalon_universal_slave_0_agent: "sdController" instantiated altera_merlin_slave_agent "mem_if_ddr3_emif_0_avl_translator_avalon_universal_slave_0_agent"
+Info: mem_if_ddr3_emif_0_avl_translator_avalon_universal_slave_0_agent_rsp_fifo: "sdController" instantiated altera_avalon_sc_fifo "mem_if_ddr3_emif_0_avl_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "sdController" instantiated altera_merlin_router "addr_router"
+Info: id_router: "sdController" instantiated altera_merlin_router "id_router"
+Info: burst_adapter: "sdController" instantiated altera_merlin_burst_adapter "burst_adapter"
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: width_adapter: "sdController" instantiated altera_merlin_combined_width_adapter "width_adapter"
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: rst_controller: "sdController" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: "sdController" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_mux: "sdController" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: rsp_xbar_demux: "sdController" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: crosser: "sdController" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Info: pipeline_bridge_swap_transform: After transform: 1 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 1 modules, 0 connections
+Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
+Info: pll0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_pll "pll0"
+Info: p0: Generating clock pair generator
+Info: p0: Generating sdController_mem_if_ddr3_emif_0_p0_altdqdqs
+Info: p0: 
+Info: p0: *****************************
+Info: p0: 
+Info: p0: Remember to run the sdController_mem_if_ddr3_emif_0_p0_pin_assignments.tcl
+Info: p0: script after running Synthesis and before Fitting.
+Info: p0: 
+Info: p0: *****************************
+Info: p0: 
+Info: p0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_phy_core "p0"
+Info: m0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_afi_mux "m0"
+Info: s0: Generating Qsys sequencer system
+Info: s0: QSYS sequencer system generated successfully
+Info: s0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_qseq "s0"
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController/synthesis/submodules/altera_merlin_slave_agent.sv
+Info: pipeline_bridge_swap_transform: After transform: 10 modules, 24 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 10 modules, 24 connections
+Info: reset_adaptation_transform: After transform: 11 modules, 26 connections
+Info: merlin_mm_transform: After transform: 11 modules, 26 connections
+Info: dmaster: "mem_if_ddr3_emif_0" instantiated alt_mem_if_jtag_master "dmaster"
+Info: pipeline_bridge_swap_transform: After transform: 5 modules, 8 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 5 modules, 8 connections
+Info: c0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_nextgen_ddr3_controller "c0"
+Info: oct0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_oct "oct0"
+Info: dll0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_dll "dll0"
+Info: dmaster_master_translator: "mem_if_ddr3_emif_0" instantiated altera_merlin_master_translator "dmaster_master_translator"
+Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController/synthesis/submodules/altera_mem_if_dll_cyclonev.sv
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController/synthesis/submodules/altera_mem_if_oct_cyclonev.sv
+Info: jtag_phy_embedded_in_jtag_master: "dmaster" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController/synthesis/submodules/altera_avalon_st_clock_crosser.v
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/sdController/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: timing_adt: Starting generation. 
+Info: timing_adt: "dmaster" instantiated timing_adapter "timing_adt"
+Info: b2p: "dmaster" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "dmaster" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "dmaster" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: Starting generation. 
+Info: b2p_adapter: "dmaster" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: Starting generation. 
+Info: p2b_adapter: "dmaster" instantiated channel_adapter "p2b_adapter"
+Info: ng0: "c0" instantiated altera_mem_if_nextgen_ddr3_controller_core "ng0"
+Info: a0: "c0" instantiated alt_mem_ddrx_mm_st_converter "a0"
+Info: sdController: Done sdController" with 37 modules, 238 files, 5843622 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

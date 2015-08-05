@@ -1,0 +1,21 @@
+set_global_assignment -entity "avalon_s" -library "avalon_s" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "avalon_s" -library "avalon_s" -name IP_TOOL_VERSION "13.0sp1"
+set_global_assignment -entity "avalon_s" -library "avalon_s" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "avalon_s" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../avalon_s.sopcinfo"]
+set_instance_assignment -entity "avalon_s" -library "avalon_s" -name SLD_INFO "QSYS_NAME avalon_s HAS_SOPCINFO 1 GENERATION_ID 1438154529"
+set_global_assignment -library "avalon_s" -name MISC_FILE [file join $::quartus(qip_path) "../../avalon_s.cmp"]
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "avalon_s" -name MISC_FILE [file join $::quartus(qip_path) "../../avalon_s.qsys"]
+
+set_global_assignment -library "avalon_s" -name VERILOG_FILE [file join $::quartus(qip_path) "avalon_s.v"]
+set_global_assignment -library "avalon_s" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
+set_global_assignment -library "avalon_s" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_synchronizer.v"]
+set_global_assignment -library "avalon_s" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
+set_global_assignment -library "avalon_s" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_agent.sv"]
+
+set_global_assignment -entity "altera_reset_controller" -library "avalon_s" -name IP_TOOL_NAME "altera_reset_controller"
+set_global_assignment -entity "altera_reset_controller" -library "avalon_s" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_reset_controller" -library "avalon_s" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_master_agent" -library "avalon_s" -name IP_TOOL_NAME "altera_merlin_master_agent"
+set_global_assignment -entity "altera_merlin_master_agent" -library "avalon_s" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_master_agent" -library "avalon_s" -name IP_TOOL_ENV "Qsys"

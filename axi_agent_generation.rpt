@@ -1,0 +1,89 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=C:/Users/Administrator/Documents/Quatus/NyuziHPS/ --output-directory=C:/Users/Administrator/Documents/Quatus/NyuziHPS/axi_agent/ --report-file=bsf:C:/Users/Administrator/Documents/Quatus/NyuziHPS/axi_agent.bsf --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file=C:/Users/Administrator/Documents/Quatus/NyuziHPS/axi_agent.qsys
+Progress: Loading NyuziHPS/axi_agent.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 13.0.1]
+Progress: Parameterizing module hps_0
+Progress: Adding merlin_axi_master_ni_0 [altera_merlin_axi_master_ni 13.0]
+Progress: Parameterizing module merlin_axi_master_ni_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: axi_agent.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Info: axi_agent.merlin_axi_master_ni_0: burst length 4
+Info: axi_agent.merlin_axi_master_ni_0: lock signals width 2
+Warning: axi_agent.merlin_axi_master_ni_0.write_cp: merlin_axi_master_ni_0.write_cp must be connected to an Avalon-ST sink
+Warning: axi_agent.merlin_axi_master_ni_0.write_rp: merlin_axi_master_ni_0.write_rp must be connected to an Avalon-ST source
+Warning: axi_agent.merlin_axi_master_ni_0.read_cp: merlin_axi_master_ni_0.read_cp must be connected to an Avalon-ST sink
+Warning: axi_agent.merlin_axi_master_ni_0.read_rp: merlin_axi_master_ni_0.read_rp must be connected to an Avalon-ST source
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=C:/Users/Administrator/Documents/Quatus/NyuziHPS/ --output-directory=C:/Users/Administrator/Documents/Quatus/NyuziHPS/axi_agent/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:C:/Users/Administrator/Documents/Quatus/NyuziHPS/axi_agent.sopcinfo --report-file=html:C:/Users/Administrator/Documents/Quatus/NyuziHPS/axi_agent.html --report-file=qip:C:/Users/Administrator/Documents/Quatus/NyuziHPS/axi_agent/synthesis/axi_agent.qip --report-file=cmp:C:/Users/Administrator/Documents/Quatus/NyuziHPS/axi_agent.cmp --report-file=svd --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file=C:/Users/Administrator/Documents/Quatus/NyuziHPS/axi_agent.qsys --language=VERILOG
+Progress: Loading NyuziHPS/axi_agent.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 13.0.1]
+Progress: Parameterizing module hps_0
+Progress: Adding merlin_axi_master_ni_0 [altera_merlin_axi_master_ni 13.0]
+Progress: Parameterizing module merlin_axi_master_ni_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: axi_agent.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Info: axi_agent.merlin_axi_master_ni_0: burst length 4
+Info: axi_agent.merlin_axi_master_ni_0: lock signals width 2
+Warning: axi_agent.merlin_axi_master_ni_0.write_cp: merlin_axi_master_ni_0.write_cp must be connected to an Avalon-ST sink
+Warning: axi_agent.merlin_axi_master_ni_0.write_rp: merlin_axi_master_ni_0.write_rp must be connected to an Avalon-ST source
+Warning: axi_agent.merlin_axi_master_ni_0.read_cp: merlin_axi_master_ni_0.read_cp must be connected to an Avalon-ST sink
+Warning: axi_agent.merlin_axi_master_ni_0.read_rp: merlin_axi_master_ni_0.read_rp must be connected to an Avalon-ST source
+Info: axi_agent: Generating axi_agent "axi_agent" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 3 modules, 6 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 3 modules, 6 connections
+Info: id_pad_transform: After transform: 4 modules, 9 connections
+Info: merlin_domain_transform: After transform: 7 modules, 30 connections
+Info: merlin_router_transform: After transform: 11 modules, 42 connections
+Info: merlin_burst_transform: After transform: 13 modules, 48 connections
+Info: com_altera_sopcmodel_transforms_avalon_CombinedWidthTransform: After transform: 15 modules, 56 connections
+Info: reset_adaptation_transform: After transform: 16 modules, 58 connections
+Info: merlin_network_to_switch_transform: After transform: 23 modules, 70 connections
+Info: merlin_mm_transform: After transform: 23 modules, 70 connections
+Info: hps_0: "Doing Pretransform for module: hps_0"
+Warning: hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 2 modules, 0 connections
+Info: hps_0: "axi_agent" instantiated altera_hps "hps_0"
+Info: merlin_axi_master_ni_0: "axi_agent" instantiated altera_merlin_axi_master_ni "merlin_axi_master_ni_0"
+Info: id_pad: "axi_agent" instantiated altera_merlin_axi_translator "id_pad"
+Info: merlin_axi_master_ni_0_altera_axi_slave_agent: "axi_agent" instantiated altera_merlin_axi_slave_ni "merlin_axi_master_ni_0_altera_axi_slave_agent"
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/axi_agent/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: addr_router: "axi_agent" instantiated altera_merlin_router "addr_router"
+Info: id_router: "axi_agent" instantiated altera_merlin_router "id_router"
+Info: burst_adapter: "axi_agent" instantiated altera_merlin_burst_adapter "burst_adapter"
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/axi_agent/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: width_adapter: "axi_agent" instantiated altera_merlin_combined_width_adapter "width_adapter"
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/axi_agent/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/axi_agent/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/axi_agent/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file C:/Users/Administrator/Documents/Quatus/NyuziHPS/axi_agent/synthesis/submodules/credit_producer.v
+Info: rst_controller: "axi_agent" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: "axi_agent" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Info: pipeline_bridge_swap_transform: After transform: 1 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 1 modules, 0 connections
+Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
+Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: axi_agent: Done axi_agent" with 14 modules, 76 files, 1947439 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
