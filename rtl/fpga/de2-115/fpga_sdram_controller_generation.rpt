@@ -1,0 +1,94 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory="C:/Users/Administrator/Documents/Quartus II/NyuziHPS/rtl/fpga/de2-115/" --output-directory="C:/Users/Administrator/Documents/Quartus II/NyuziHPS/rtl/fpga/de2-115/fpga_sdram_controller/" --report-file="bsf:C:/Users/Administrator/Documents/Quartus II/NyuziHPS/rtl/fpga/de2-115/fpga_sdram_controller.bsf" --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file="C:/Users/Administrator/Documents/Quartus II/NyuziHPS/rtl/fpga/de2-115/fpga_sdram_controller.qsys"
+Progress: Loading de2-115/fpga_sdram_controller.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding mem_if_ddr3_emif_0 [altera_mem_if_ddr3_emif 13.0]
+Progress: Parameterizing module mem_if_ddr3_emif_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: fpga_sdram_controller.mem_if_ddr3_emif_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Warning: fpga_sdram_controller.mem_if_ddr3_emif_0: 'Quick' simulation modes are NOT timing accurate. Some simulation memory models may issue warnings or errors
+Warning: fpga_sdram_controller.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.status must be exported, or connected to a matching conduit.
+Warning: fpga_sdram_controller.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.pll_sharing must be exported, or connected to a matching conduit.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory="C:/Users/Administrator/Documents/Quartus II/NyuziHPS/rtl/fpga/de2-115/" --output-directory="C:/Users/Administrator/Documents/Quartus II/NyuziHPS/rtl/fpga/de2-115/fpga_sdram_controller/synthesis/" --file-set=QUARTUS_SYNTH --report-file="sopcinfo:C:/Users/Administrator/Documents/Quartus II/NyuziHPS/rtl/fpga/de2-115/fpga_sdram_controller.sopcinfo" --report-file="html:C:/Users/Administrator/Documents/Quartus II/NyuziHPS/rtl/fpga/de2-115/fpga_sdram_controller.html" --report-file="qip:C:/Users/Administrator/Documents/Quartus II/NyuziHPS/rtl/fpga/de2-115/fpga_sdram_controller/synthesis/fpga_sdram_controller.qip" --report-file="cmp:C:/Users/Administrator/Documents/Quartus II/NyuziHPS/rtl/fpga/de2-115/fpga_sdram_controller.cmp" --report-file=svd --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file="C:/Users/Administrator/Documents/Quartus II/NyuziHPS/rtl/fpga/de2-115/fpga_sdram_controller.qsys" --language=VERILOG
+Progress: Loading de2-115/fpga_sdram_controller.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding mem_if_ddr3_emif_0 [altera_mem_if_ddr3_emif 13.0]
+Progress: Parameterizing module mem_if_ddr3_emif_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: fpga_sdram_controller.mem_if_ddr3_emif_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Warning: fpga_sdram_controller.mem_if_ddr3_emif_0: 'Quick' simulation modes are NOT timing accurate. Some simulation memory models may issue warnings or errors
+Warning: fpga_sdram_controller.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.status must be exported, or connected to a matching conduit.
+Warning: fpga_sdram_controller.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.pll_sharing must be exported, or connected to a matching conduit.
+Info: fpga_sdram_controller: Generating fpga_sdram_controller "fpga_sdram_controller" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 3 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 2 modules, 3 connections
+Info: pipeline_bridge_swap_transform: After transform: 17 modules, 39 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 19 modules, 45 connections
+Info: merlin_mm_transform: After transform: 19 modules, 45 connections
+Info: mem_if_ddr3_emif_0: "fpga_sdram_controller" instantiated altera_mem_if_ddr3_emif "mem_if_ddr3_emif_0"
+Info: pll0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_pll "pll0"
+Info: p0: Generating clock pair generator
+Info: p0: Generating fpga_sdram_controller_mem_if_ddr3_emif_0_p0_altdqdqs
+Info: p0: 
+Info: p0: *****************************
+Info: p0: 
+Info: p0: Remember to run the fpga_sdram_controller_mem_if_ddr3_emif_0_p0_pin_assignments.tcl
+Info: p0: script after running Synthesis and before Fitting.
+Info: p0: 
+Info: p0: *****************************
+Info: p0: 
+Info: p0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_phy_core "p0"
+Info: m0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_afi_mux "m0"
+Info: s0: Generating Qsys sequencer system
+Info: s0: QSYS sequencer system generated successfully
+Info: s0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_qseq "s0"
+Info: pipeline_bridge_swap_transform: After transform: 10 modules, 24 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 10 modules, 24 connections
+Info: reset_adaptation_transform: After transform: 11 modules, 26 connections
+Info: merlin_mm_transform: After transform: 11 modules, 26 connections
+Info: dmaster: "mem_if_ddr3_emif_0" instantiated alt_mem_if_jtag_master "dmaster"
+Info: pipeline_bridge_swap_transform: After transform: 5 modules, 8 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 5 modules, 8 connections
+Info: c0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_nextgen_ddr3_controller "c0"
+Info: oct0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_oct "oct0"
+Info: dll0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_dll "dll0"
+Info: dmaster_master_translator: "mem_if_ddr3_emif_0" instantiated altera_merlin_master_translator "dmaster_master_translator"
+Info: s0_seq_debug_translator: "mem_if_ddr3_emif_0" instantiated altera_merlin_slave_translator "s0_seq_debug_translator"
+Info: jtag_phy_embedded_in_jtag_master: "dmaster" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: Starting generation. 
+Info: timing_adt: "dmaster" instantiated timing_adapter "timing_adt"
+Info: fifo: "dmaster" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "dmaster" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "dmaster" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "dmaster" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: Starting generation. 
+Info: b2p_adapter: "dmaster" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: Starting generation. 
+Info: p2b_adapter: "dmaster" instantiated channel_adapter "p2b_adapter"
+Info: rst_controller: "dmaster" instantiated altera_reset_controller "rst_controller"
+Info: ng0: "c0" instantiated altera_mem_if_nextgen_ddr3_controller_core "ng0"
+Info: a0: "c0" instantiated alt_mem_ddrx_mm_st_converter "a0"
+Info: fpga_sdram_controller: Done fpga_sdram_controller" with 23 modules, 164 files, 4115298 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

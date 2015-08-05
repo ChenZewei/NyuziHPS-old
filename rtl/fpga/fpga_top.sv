@@ -37,16 +37,38 @@ module fpga_top(
 	input                       uart_rx,
 
 	// SDRAM	
-	output                      dram_clk,
-	output                      dram_cke, 
-	output                      dram_cs_n, 
-	output                      dram_ras_n, 
-	output                      dram_cas_n, 
-	output                      dram_we_n,
-	output [1:0]                dram_ba,	
-	output [12:0]               dram_addr,
-	output [3:0]                dram_dqm,
-	inout [31:0]                dram_dq,
+	/*//JBush SDRam controller 
+	output                      dram_clk,   //Clock
+	output                      dram_cke,   //Clock Enable
+	output                      dram_cs_n,  //Chip Select
+	output                      dram_ras_n, //Raw Address Strobe
+	output                      dram_cas_n, //Colume Address Strobe
+	output                      dram_we_n,  //Write Enable
+	output [1:0]                dram_ba,	 //Bank Address
+	output [12:0]               dram_addr,  //Address Bus A0-A14
+	output [3:0]                dram_dqm,   //Data Mask
+	inout [31:0]                dram_dq,    //Data Bus
+	*/
+	
+	//
+	output[14:0]                dram_addr,  //Address Bus A0-A14
+	output [2:0]                dram_ba,	 //Bank Address Bus BA 0 1 2
+	output                      dram_cas_n, //Colume Address Strobe
+	output                      dram_cke,   //Clock Enable
+	output                      dram_clk_p, //Differencial Output Clock
+	output                      dram_clk_n, //Differencial Output Clock
+	output                      dram_cs_n,  //Chip Select
+	output [3:0]                dram_dqm,   //Write Mask Byte Lane
+	inout [31:0]                dram_dq,    //Data Bus
+	output [3:0]					 dram_dqs_p, //Data Strobe P Byte Lane 0-3
+	output [3:0]					 dram_dqs_n, //Data Strobe N Byte Lane 0-3
+	output							 dram_odt,   //One-die Termination Enable
+	output                      dram_ras_n, //Raw Address Strobe
+	output							 dram_resetn,//Reset
+	output                      dram_we_n,  //Write Enable
+	output							 dram_zq01,  //ZQ Impedance Calibration
+	
+	
 	
 	// VGA
 	output [7:0]                vga_r,
