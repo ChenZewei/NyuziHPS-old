@@ -51,7 +51,7 @@ module fpga_top(
 	*/
 	
 	//
-	output[14:0]                dram_addr,  //Address Bus A0-A14
+	output[14:0]                dram_a,  //Address Bus A0-A14
 	output [2:0]                dram_ba,	 //Bank Address Bus BA 0 1 2
 	output                      dram_cas_n, //Colume Address Strobe
 	output                      dram_cke,   //Clock Enable
@@ -66,7 +66,7 @@ module fpga_top(
 	output                      dram_ras_n, //Raw Address Strobe
 	output							 dram_resetn,//Reset
 	output                      dram_we_n,  //Write Enable
-	output							 dram_zq01,  //ZQ Impedance Calibration
+	output							 dram_rzq,  //ZQ Impedance Calibration
 	
 	
 	
@@ -179,6 +179,8 @@ module fpga_top(
 		.clk(clk),
 		.axi_bus(axi_bus_m0.slave),);
 	*/
+	
+	/*
 	sdram_controller #(
 			.DATA_WIDTH(32), 
 			.ROW_ADDR_WIDTH(13), 
@@ -194,7 +196,6 @@ module fpga_top(
 			.T_RAS_CAS_DELAY(1),      // 21 ns	
 			.T_CAS_LATENCY(1)		  // 21 ns (2 cycles)
 		) sdram_controller(
-			/*AUTOINST*/
 				   // Interfaces
 				   .axi_bus		(axi_bus_m0.slave), // Templated
 				   // Outputs
@@ -213,6 +214,64 @@ module fpga_top(
 				   // Inputs
 				   .clk			(clk),		 // Templated
 				   .reset		(reset));
+	*/
+	
+    fpga_sdram_controller u0 (
+        .clk_clk                      (clk),                      //                  clk.clk
+        .reset_reset_n                (reset),                //                reset.reset_n
+        .memory_mem_a                 (dram_a),                 //               memory.mem_a
+        .memory_mem_ba                (dram_ba),                //                     .mem_ba
+        .memory_mem_ck                (dram_clk_p),                //                     .mem_ck
+        .memory_mem_ck_n              (dram_clk_n),              //                     .mem_ck_n
+        .memory_mem_cke               (dram_cke),               //                     .mem_cke
+        .memory_mem_cs_n              (dram_cs_n),              //                     .mem_cs_n
+        .memory_mem_dm                (),                //                     .mem_dm
+        .memory_mem_ras_n             (dram_ras_n),             //                     .mem_ras_n
+        .memory_mem_cas_n             (dram_cas_n),             //                     .mem_cas_n
+        .memory_mem_we_n              (dram_we_n),              //                     .mem_we_n
+        .memory_mem_reset_n           (),           //                     .mem_reset_n
+        .memory_mem_dq                (dram_dq),                //                     .mem_dq
+        .memory_mem_dqs               (dram_dqs_p),               //                     .mem_dqs
+        .memory_mem_dqs_n             (dram_dqs_n),             //                     .mem_dqs_n
+        .memory_mem_odt               (dram_odt),               //                     .mem_odt
+        .oct_rzqin                    (),                    //                  oct.rzqin
+        .axi_translator_slave_awid    (),    // axi_translator_slave.awid
+        .axi_translator_slave_awaddr  (axi_bus_m0.slave.m_awaddr),  //                     .awaddr
+        .axi_translator_slave_awlen   (axi_bus_m0.slave.m_awlen),   //                     .awlen
+        .axi_translator_slave_awsize  (axi_bus_m0.slave.m_awsize),  //                     .awsize
+        .axi_translator_slave_awburst (axi_bus_m0.slave. m_awburst), //                     .awburst
+        .axi_translator_slave_awlock  (),  //                     .awlock
+        .axi_translator_slave_awcache (axi_bus_m0.slave.m_awcache), //                     .awcache
+        .axi_translator_slave_awprot  (),  //                     .awprot
+        .axi_translator_slave_awvalid (axi_bus_m0.slave.m_awvalid), //                     .awvalid
+        .axi_translator_slave_awready (axi_bus_m0.slave.s_awready), //                     .awready
+        .axi_translator_slave_wid     (),     //                     .wid
+        .axi_translator_slave_wdata   (axi_bus_m0.slave.m_wdata),   //                     .wdata
+        .axi_translator_slave_wstrb   (axi_bus_m0.slave.m_wstrb),   //                     .wstrb
+        .axi_translator_slave_wlast   (axi_bus_m0.slave. m_wlast),   //                     .wlast
+        .axi_translator_slave_wvalid  (axi_bus_m0.slave.m_wvalid),  //                     .wvalid
+        .axi_translator_slave_wready  (axi_bus_m0.slave.s_wready),  //                     .wready
+        .axi_translator_slave_bid     (),     //                     .bid
+        .axi_translator_slave_bresp   (),   //                     .bresp
+        .axi_translator_slave_bvalid  (axi_bus_m0.slave.s_bvalid),  //                     .bvalid
+        .axi_translator_slave_bready  (axi_bus_m0.slave.m_bready),  //                     .bready
+        .axi_translator_slave_arid    (),    //                     .arid
+        .axi_translator_slave_araddr  (axi_bus_m0.slave.m_araddr),  //                     .araddr
+        .axi_translator_slave_arlen   (axi_bus_m0.slave.m_arlen),   //                     .arlen
+        .axi_translator_slave_arsize  (axi_bus_m0.slave.m_arsize),  //                     .arsize
+        .axi_translator_slave_arburst (axi_bus_m0.slave.m_arburst), //                     .arburst
+        .axi_translator_slave_arlock  (),  //                     .arlock
+        .axi_translator_slave_arcache (axi_bus_m0.slave.m_arcache), //                     .arcache
+        .axi_translator_slave_arprot  (),  //                     .arprot
+        .axi_translator_slave_arvalid (axi_bus_m0.slave.m_arvalid), //                     .arvalid
+        .axi_translator_slave_arready (axi_bus_m0.slave.s_arready), //                     .arready
+        .axi_translator_slave_rid     (),     //                     .rid
+        .axi_translator_slave_rdata   (axi_bus_m0.slave.s_rdata),   //                     .rdata
+        .axi_translator_slave_rresp   (),   //                     .rresp
+        .axi_translator_slave_rlast   (),   //                     .rlast
+        .axi_translator_slave_rvalid  (axi_bus_m0.slave.s_rvalid),  //                     .rvalid
+        .axi_translator_slave_rready  (axi_bus_m0.slave.m_rready)   //                     .rready
+    );
 
 	vga_controller vga_controller(
 	      .axi_bus(axi_bus_s1.master),

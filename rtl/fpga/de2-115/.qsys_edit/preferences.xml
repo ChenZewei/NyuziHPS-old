@@ -17,6 +17,6 @@
  </clocktable>
  <window width="1920" height="1040" x="0" y="0" />
  <library
-   expandedCategories="Library/Qsys Interconnect/AXI Interface,Library/Verification,Library/Qsys Interconnect,Library/Qsys Interconnect/Memory-Mapped,Library/Verification/Simulation,Library,Project" />
+   expandedCategories="Library/Qsys Interconnect/Memory-Mapped,Library/Verification,Project,Library/Qsys Interconnect,Library,Library/Qsys Interconnect/AXI Interface,Library/Verification/Simulation" />
  <hdlexample language="VERILOG" />
 </preferences>
